@@ -395,3 +395,15 @@ p { margin: 0; }
 .k-size { margin: 0 0 6px; font-size: 14px; color: var(--muted); }
 @media (max-width: 900px) { .k-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 12px; } }
 @media (max-width: 420px) { .k-info h3 { font-size: 18px; } .k-thumbs button { width: 44px; height: 44px; } }
+
+/* Páginas curtas dos catálogos em PDF (catalogo-tapetes, catalogo-mobiliario) */
+.pdf-cover { justify-content: center; padding-block: clamp(48px, 7vw, 104px) clamp(72px, 9vw, 120px); }
+.split.pdf-cover > .media { flex: 0 1 340px; }
+.pdf-cover .media a { display: block; }
+.split.pdf-cover img { aspect-ratio: 9 / 16; object-fit: cover; box-shadow: 0 22px 48px rgba(43, 33, 24, 0.16); }
+.pdf-cover h1 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.2; }
+.pdf-cover .pdf-note { margin: -10px 0 0; font-size: 13px; }
+@media (max-width: 760px) {
+  .pdf-cover { padding-top: 32px; }
+  .split.pdf-cover > .media { flex-basis: 100%; max-width: 260px; margin-inline: auto; }
+}
